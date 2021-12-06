@@ -98,13 +98,13 @@ Como citado acima, para o desenvolvimento base de nossa aplicação web foram ut
 
 	
 	
-	3.2. Fluxo de publicação (fazer depois)
+	3.2. Fluxo de publicação 
 
-Fazer ainda
+![Wireframes](IMG/fluxo.png "Wireframes")
 
 
 
-	3.3 Telas do sistema (fazer depois)
+	3.3 Telas do sistema 
 ![Wireframes](IMG/index.png "Wireframes")
 ![Wireframes](IMG/produtos.png "Wireframes")
 ![Wireframes](IMG/sobreNos.png "Wireframes")
@@ -112,8 +112,11 @@ Fazer ainda
 ![Wireframes](IMG/entrar.png "Wireframes")
 ![Wireframes](IMG/registrar.png "Wireframes")
 ![Wireframes](IMG/MinhaConta.png "Wireframes")
-
-
+![Wireframes](IMG/t1.png "Wireframes")
+![Wireframes](IMG/t2.png "Wireframes")
+![Wireframes](IMG/t3.png "Wireframes")
+![Wireframes](IMG/t5.png "Wireframes")
+![Wireframes](IMG/index.png "Wireframes")
 ## 4.Modelagem de Dados
 
 Para o funcionamento da aplicação, foi necessário uma estrutura que comportasse os dados dos usuários e os respectivos processos pelos quais cada usuário passa até a realização da compra.
