@@ -22,12 +22,11 @@ _Considerando a atual situação dos e-commerces, que não garantem a autenticid
 ---
 _**Link Do Site**_
 _https://yagi.netlify.app/_
----
 
 ---
 _**Link do Video**_
 _https://www.youtube.com/watch?v=tUoxe8AbHcQ_
----
+
 ## 1.Introdução 
 
 	1.1 Contextualização
