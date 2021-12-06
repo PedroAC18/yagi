@@ -9,7 +9,7 @@ public class Produto implements Serializable, JsonFormatter {
     public static final int MAX_ESTOQUE = 1000;
     private int id;
     private String nome;
-    private float preco;
+    private int preco;
     private String fichaTecnica;
     private int quantidade;
     private String categoria;
@@ -18,14 +18,14 @@ public class Produto implements Serializable, JsonFormatter {
     public Produto() {
         id = -1;
         nome = "";
-        preco = 0.01F;
+        preco = 0;
         fichaTecnica = "";
         quantidade = 0;
         categoria = "";
         imagemUrl = "";
     }
 
-    public Produto(int id, String nome, float preco, String fichaTecnica, int quantidade, String categoria, String imagemUrl) {
+    public Produto(int id, String nome, int preco, String fichaTecnica, int quantidade, String categoria, String imagemUrl) {
         setId(id);
         setNome(nome);
         setPreco(preco);
@@ -52,11 +52,11 @@ public class Produto implements Serializable, JsonFormatter {
         this.nome = nome;
     }
 
-    public float getPreco() {
+    public int getPreco() {
         return preco;
     }
 
-    public void setPreco(float preco) {
+    public void setPreco(int preco) {
         if (preco > 0)
             this.preco = preco;
     }

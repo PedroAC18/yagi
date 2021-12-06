@@ -21,14 +21,15 @@ public class ProdutoService implements Service {
 	public Object add(Request request, Response response) throws URISyntaxException {
 		produtoDAO.connect();
 		
-		int id = produtoDAO.getIdMax()+1;//Integer.parseInt(request.queryParams("id"));
+		int idMax = produtoDAO.getIdMax();
+		
+		int id = idMax+1;//Integer.parseInt(request.queryParams("id"));
 		String nome = request.queryParams("nome").trim();
 		int preco = Integer.parseInt(request.queryParams("preco"));
 		String fichaTecnica = request.queryParams("fichaTecnica").trim();
 		int quantidade = 1;//Integer.parseInt(request.queryParams("quantidade"));
 		String categoria = request.queryParams("categoria").trim();
 		String imagemUrl = request.queryParams("imagemUrl").trim();
-		
 
 		
 		
@@ -38,11 +39,12 @@ public class ProdutoService implements Service {
 		produtoDAO.add(produto);
 
 		response.status(201); // created
-		response.redirect("../index.html");
+		//response.redirect("../index.html");
 		
 		produtoDAO.close();
 		
-		return produtoDAO.getIdMax();
+		String msg = "Produto com id " + id + " criado com sucesso!";
+		return msg;
 	}
 
 	@Override
@@ -62,7 +64,7 @@ public class ProdutoService implements Service {
 			return produto.toJson();
 		} else {
 			response.status(404); // NOT FOUND
-			response.redirect("404.html");
+			//response.redirect("404.html");
 			return null;
 		}
 	}
@@ -88,7 +90,7 @@ public class ProdutoService implements Service {
 			return produto.getId();
 		} else {
 			response.status(404); // 404 Not found
-			response.redirect("404.html");
+			//response.redirect("404.html");
 			return null;
 		}
 
@@ -110,7 +112,7 @@ public class ProdutoService implements Service {
 			return produto.getId();
 		} else {
 			response.status(404); // 404 Not found
-			response.redirect("/notfound.html");
+			//response.redirect("/notfound.html");
 			return null;
 		}
 	}

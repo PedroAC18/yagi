@@ -24,7 +24,7 @@ public class ProdutoDAO extends Banco implements DAO<Produto> {
 				produto = new Produto(
 									 rs.getInt("id"), 
 									 rs.getString("nome"), 
-									 rs.getFloat("preco"),
+									 rs.getInt("preco"),
 						 		     rs.getString("fichaTecnica"), 
 						 		     rs.getInt("quantidade"),
 						 		     rs.getString("categoria"), 
@@ -109,7 +109,7 @@ public class ProdutoDAO extends Banco implements DAO<Produto> {
 					produto[i] = new Produto(
 							 rs.getInt("id"), 
 							 rs.getString("nome"), 
-							 rs.getFloat("preco"),
+							 rs.getInt("preco"),
 				 		     rs.getString("fichaTecnica"), 
 				 		     rs.getInt("quantidade"),
 				 		     rs.getString("categoria"), 
@@ -131,7 +131,7 @@ public class ProdutoDAO extends Banco implements DAO<Produto> {
 		int id = 0;
 		try {
 			Statement st = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-			String sql = ("SELECT MAX(id) FROM produto");
+			String sql = ("SELECT max(id) FROM produto");
 			ResultSet rs = st.executeQuery(sql);
 			if (rs.next()) {
 				id = rs.getInt("max");

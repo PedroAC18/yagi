@@ -168,7 +168,7 @@
                         <div id="lg1" class="tab-pane active">
                             <div class="login-form-container">
                                 <div class="login-register-form">
-                                    <form action="http://localhost:4568/usuario" method="get" id="form-get">
+                                    <form onsubmit="onLogin()" id="form-get">
                                         <input type="text" id="login2" name="login" placeholder="E-mail">
                                         <input type="password" id="senha2" name="senha" placeholder="Senha">
                                         <div class="button-box">
@@ -427,6 +427,7 @@
 <script src="assets/js/vendor/modernizr-3.11.7.min.js"></script>
 <script src="assets/js/vendor/jquery-v3.6.0.min.js"></script>
 <script src="assets/js/vendor/jquery-migrate-v3.3.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="assets/js/vendor/popper.min.js"></script>
 <script src="assets/js/vendor/bootstrap.min.js"></script>
 <script src="assets/js/plugins.js"></script>
@@ -443,9 +444,9 @@ function onRegister() {
     const senha = document.getElementById("senha").value;
     const celular = document.getElementById("celular").value;
 
- 	debugger;
 
     $.ajax({
+       async:false,
        url: 'http://0.0.0.0:4568/usuario',
        method: 'POST',
        data: {
@@ -455,9 +456,54 @@ function onRegister() {
           login,
           senha,
           celular
-       }
+       },
+
+       success: function (result, json, data) {
+
+            console.log(result);
+            alert(result);
+
+        },
+
+        error: function (req, status, error, result) {
+            alert(error);
+        }
+
     }).done(function() { console.log("success") })
       .fail(function() { console.log("fail") })
+}
+</script>
+
+<script>
+function onLogin() {
+
+    const login2 = document.getElementById("login2").value;
+    const senha2 = document.getElementById("senha2").value;
+
+    $.ajax({
+       async:false,
+       url: 'http://0.0.0.0:4568/usuario',
+       method: 'GET',
+       data: {
+          login2,
+          senha2
+       },
+
+        success: function (result, json, data) {
+
+            console.log(result);
+            alert('Bem vindo ' + result.nome);
+
+        },
+
+        error: function (req, status, error) {
+            alert(error);
+        }
+
+
+    }).done(function() { console.log("success") })
+      .fail(function() { console.log("fail") })
+
 }
 </script>
 </body>

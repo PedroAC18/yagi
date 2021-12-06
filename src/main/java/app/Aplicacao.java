@@ -17,6 +17,7 @@ public class Aplicacao {
     private static ProdutoService produtoService = new ProdutoService();
 	
     public static void main(String[] args) {
+    	
     	port(4568);
     	staticFiles.location("/");
     	//Usuário
@@ -28,8 +29,8 @@ public class Aplicacao {
         post("/produto", (request,response) ->  produtoService.add(request, response) );
 		get("/all/produto/", (request, response) -> produtoService.getAll(request, response)); 
 		get("/get/produto/:id", (request, response) -> produtoService.get(request, response)); 
-		//put("/update/produto/:id", (request, response) -> produtoService.update(request, response));
-		//delete("/delete/produto/:id", (request, response) -> produtoService.remove(request,response));
+		put("/update/produto/:id", (request, response) -> produtoService.update(request, response));
+		delete("/delete/produto/:id", (request, response) -> produtoService.remove(request,response));
               
     }
 }

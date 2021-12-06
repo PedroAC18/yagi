@@ -1,9 +1,7 @@
 package service;
 
 import java.math.BigInteger;
-import java.net.URISyntaxException;
 import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 
 import dao.UsuarioDAO;
 import model.Usuario;
@@ -51,8 +49,8 @@ public class UsuarioService {
     public Object get(Request request, Response response) throws Exception {
         usuarioDAO.connect();
         
-        String login = request.queryParams("login");
-        String senha = request.queryParams("senha");
+        String login = request.queryParams("login2");
+        String senha = request.queryParams("senha2");
         
         Usuario usuario = (Usuario) usuarioDAO.get(login);
         
@@ -68,14 +66,17 @@ public class UsuarioService {
         boolean senhaCorreta = usuario.getSenha().compareTo(new BigInteger(1,m.digest()).toString(16)) == 0 ? true : false;
         
         if (usuario != null && senhaCorreta) {
+        	System.out.println("Sucesso");
             return usuario.toJson();
         } else if(!senhaCorreta){
             response.status(403); // NOT FOUND
+            System.out.println("Senha Incorreta");
             return "Senha Incorreta";
         }
         else {
             response.status(404); // NOT FOUND
             //response.redirect("404.html");
+            System.out.println("Esse usuario não existe!");
             return "Esse usuario não existe!";
         }
     }
