@@ -127,9 +127,18 @@ A entidade USUÁRIO é a mais genérica, possuindo a chave primária de CPF, e a
 
 
 ## 5. Serviços Inteligentes
+No projeto foi desenvolvido um ChatBot, software que possibilita receber mensagens escritas, interpretar o seu conteúdo e oferecer respostas adequadas, chamado de YAGIBot. Possui o obejtivo de responder dvidas dos usuários, além de mostrar as implementações do site.
+	5.1 Intelligent Systems Canvas
+Para desenvolvimento do ChatBot, sendo um Sistema Conversacional, foi utilizada a metodologia Intelligent Systems Canvas (IS Canvas), projetado para visualização da proposta da aplicação, da seguinte forma:
 ![Wireframes](IMG/canvas.png "Wireframes")
+
+	5.2 Fluxo de Diálogo
+O YAGIBot foi desenvolvido a partir de entradas de dados sobre o sistema do site. Dessa forma, é possível oferecer respostas plausíveis e bem fundamentadas.
+A imagem a seguir, demonstra todo o fluxo de Diálogo que o ChatBot segue:
 ![Wireframes](IMG/fluxo.png "Wireframes")
 
+5.3 Implementação
+O ChatBot foi desenvolvido e publicado através da plataforma BlipChat
 
 ## 6.Gerenciamento de Projeto
 
