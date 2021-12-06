@@ -127,6 +127,7 @@ A entidade USUÁRIO é a mais genérica, possuindo a chave primária de CPF, e a
 
 
 ## 5. Serviços Inteligentes
+![Wireframes](IMG/canvas.png "Wireframes")
 ![Wireframes](IMG/fluxo.png "Wireframes")
 
 
