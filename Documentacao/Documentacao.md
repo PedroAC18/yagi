@@ -1,12 +1,12 @@
 # YAGI – E-commerce de Sneakers
 
-**João Pedro de Castro, email**
+**João Pedro de Castro, joaopedrocastro05@gmail.com**
 
 **João Victor dos Santos, joao.santos.1130758@pucminas.sga.br**
 
 **Pedro Assis Corrêa, pedro.correa1101@gmail.com**
 
-**Wyan Gauzzi, email**
+**Wyan Gauzzi, wyan@gmail.com**
 
 ---
 
@@ -20,7 +20,14 @@ _**Resumo**_
 _Considerando a atual situação dos e-commerces, que não garantem a autenticidade dos produtos e aplicam preços exorbitantes, foi de interesse da equipe montar um site que garanta ao consumidor que na plataforma, ele estará seguro às inseguranças citadas anteriormente. Tal processo é garantido a partir da análise de profissionais no ramo da moda, que garantirão a alta qualidade e autenticidade dos produtos disponibilizados._
 
 ---
+_**Link Do Site**_
+_https://yagi.netlify.app/_
+---
 
+---
+_**Link do Video**_
+_https://www.youtube.com/watch?v=tUoxe8AbHcQ_
+---
 ## 1.Introdução 
 
 	1.1 Contextualização
